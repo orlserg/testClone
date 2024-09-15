@@ -1,0 +1,22 @@
+run = ["make", "run"]
+entrypoint = "main.go"
+hidden = ["Makefile", "main"]
+
+[languages.go]
+pattern = "**/*.go"
+
+[languages.go.languageServer]
+start = "gopls"
+
+[nix]
+channel = "stable-21_11"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[[ports]]
+localPort = 80
+externalPort = 80
+
+[objectStorage]
+defaultBucketID = "replit-objstore-b9d0aea8-122c-4618-952a-89b65fcfd54b"
