@@ -12,7 +12,7 @@ func main() {
 	// target := "http://localhost:8283"
 	targetURL, err := url.Parse(target)
 	if err != nil {
-		log.Fatalf("Failed to parse target URL: %v", err)
+		log.Fatalf("Failed to parse target URL: %v", err) // dadata "6aa6c4610172cd3ac53226f64516c1b6969ed7df"
 	}
 
 	proxy := httputil.NewSingleHostReverseProxy(targetURL)
